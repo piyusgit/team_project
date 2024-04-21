@@ -5,6 +5,8 @@ import PropTypes from "prop-types";
 
 import HomePage from "./components/HomePage";
 import LoginPage from "./components/LoginPage";
+// import { Provider } from "react-redux";
+// import store from "./store";
 
 function App() {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -14,6 +16,7 @@ function App() {
   // };
 
   return (
+    // <Provider store={store}>
     <Router>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
@@ -21,6 +24,8 @@ function App() {
         <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </Router>
+    // </Provider>
+
 
     // {/* {!isLoggedIn ? (
     //       <LoginPage onLoginSuccess={handleLoginSuccess} />
