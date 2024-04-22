@@ -30,6 +30,9 @@ export const Navbar = () => {
           <NavLink to="/refer">Refer&Earn</NavLink>
         </li>
         <li>
+          <NavLink to="/signup">SignUp</NavLink>
+        </li>
+        <li>
           <NavLink to="/login">Login</NavLink>
         </li>
       </ul>

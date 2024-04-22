@@ -1,11 +1,12 @@
 // import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router-dom";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 import HomePage from "./components/HomePage";
 import LoginPage from "./components/LoginPage";
 import { Navbar } from "./components/navbar/Navbar";
+import SignUp from "./components/SignUp";
 // import Admin from "./components/Admin";
 // import { Provider } from "react-redux";
 // import store from "./store";
@@ -24,8 +25,9 @@ function App() {
       {/* <Router> */}
       <Routes>
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/home" element={<ProtectedRoute />} />
+        <Route path="/home" element={<HomePage />} />
         <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/signup" element={<SignUp />} />
         {/* <Route path="/admin" element={<Admin />} /> */}
       </Routes>
       {/* </Router> */}
@@ -34,12 +36,12 @@ function App() {
   );
 }
 
-const ProtectedRoute = () => {
-  const isAuthenticated = sessionStorage.getItem("authenticated") === "true";
-  return isAuthenticated ? <HomePage /> : <Navigate to="/login" />;
-};
+// const ProtectedRoute = () => {
+//   const isAuthenticated = sessionStorage.getItem("authenticated") === "true";
+//   return isAuthenticated ? <HomePage /> : <Navigate to="/login" />;
+// };
 
-ProtectedRoute.propTypes = {
-  element: PropTypes.element.isRequired,
-};
+// ProtectedRoute.propTypes = {
+//   element: PropTypes.element.isRequired,
+// };
 export default App;
