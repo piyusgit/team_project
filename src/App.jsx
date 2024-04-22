@@ -5,6 +5,8 @@ import PropTypes from "prop-types";
 
 import HomePage from "./components/HomePage";
 import LoginPage from "./components/LoginPage";
+import { Navbar } from "./components/navbar/Navbar";
+// import Admin from "./components/Admin";
 // import { Provider } from "react-redux";
 // import store from "./store";
 
@@ -16,22 +18,19 @@ function App() {
   // };
 
   return (
-    // <Provider store={store}>
-    <Router>
+    <div className="app">
+      {/* <Provider store={store}>  */}
+      <Navbar />
+      {/* <Router> */}
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/home" element={<ProtectedRoute />} />
         <Route path="/" element={<Navigate to="/login" />} />
+        {/* <Route path="/admin" element={<Admin />} /> */}
       </Routes>
-    </Router>
-    // </Provider>
-
-
-    // {/* {!isLoggedIn ? (
-    //       <LoginPage onLoginSuccess={handleLoginSuccess} />
-    //     ) : (
-    //       <HomePage />
-    //     )} */}
+      {/* </Router> */}
+      {/* </Provider>  */}
+    </div>
   );
 }
 

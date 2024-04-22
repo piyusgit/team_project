@@ -1,7 +1,7 @@
 // AdminPage.js
-import React, { useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { updateUserData } from "./actions";
+import { updateUserData } from "../redux/action.js";
 
 const AdminPage = () => {
   const dispatch = useDispatch();

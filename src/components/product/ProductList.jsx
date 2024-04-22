@@ -1,5 +1,4 @@
-import React from 'react';
-import ProductCard from './ProductCard';
+import ProductCard from "./ProductCard";
 
 const dummyData = [
   {
@@ -34,7 +33,7 @@ const dummyData = [
 const ProductList = () => {
   return (
     <div>
-      {dummyData.map(product => (
+      {dummyData.map((product) => (
         <ProductCard
           key={product.id}
           title={product.title}
