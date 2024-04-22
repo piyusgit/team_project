@@ -19,7 +19,7 @@ const LoginPage = () => {
           if (res.data == "exist") {
             navigate("/home"); // Use navigate function to redirect
           } else if (res.data == "notexist") {
-            alert("User not SignUp!");
+            alert("InCorrect Password / User not SignUp!");
           }
         })
         .catch((err) => {
@@ -58,7 +58,7 @@ const LoginPage = () => {
         >
           <h1>Login Page</h1>
           <div style={{ marginBottom: "15px" }}>
-            <label className="form-label">Username:</label>
+            <label className="form-label">Phone-Number:</label>
             <input
               placeholder="phoneNumber"
               id="phoneNumber"

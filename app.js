@@ -15,9 +15,10 @@ app.post("/", async (req, res) => {
   const { phoneNumber, password } = req.body;
 
   try {
-    const isValid = await User.findOne({ phoneNumber: phoneNumber });
-    console.log(isValid);
-    if (isValid) {
+    const data = await User.findOne({ phoneNumber: phoneNumber });
+    console.log(data);
+
+    if (data.password == password) {
       res.json("exist");
     } else {
       res.json("notexist");
